@@ -1,0 +1,24 @@
+.dialog {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.decline-btn{
+    background-color: red;
+    border-radius: 35%;
+}
+
+.answer-btn{
+    background-color: green;
+    border-radius: 35%;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }

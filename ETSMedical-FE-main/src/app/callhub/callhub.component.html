@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <h1>CallHub</h1>
+
+    <div class= "row">
+      <div class="chat-box">
+        <ng-container *ngFor="let message of messages$ | async">
+          <div>
+              {{message.Timestamp}} - {{message.User.UserName}} : {{message.Message}}
+          </div>
+        </ng-container>
+        <div class="col-8">
+          <input [(ngModel)]="dataString" required placeholder="Write a message" type="text">
+        </div>
+        <div class="col-4">
+          <button (click)="sendMessage()" type="button" class="btn btn-sm btn-secondary">Send</button>
+        </div>
+      </div>
+      <div class="col-7">
+        <div class="row">
+          <app-call-popup style="align-self: center;" ></app-call-popup>
+        </div>
+        <div class="row">
+          <app-user-list></app-user-list>
+      </div>
+    </div>        
+    </div>
+
+
+
+    
+  </div>

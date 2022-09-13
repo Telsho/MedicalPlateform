@@ -1,0 +1,19 @@
+<div class="row mt-4">
+    <div class="col">
+      <h5 *ngIf="userVideo">{{callUser.userName}}</h5>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col">
+      <video #videoPlayer width="500" height="400" controls></video>
+    </div>
+    <div class="col">
+      <div class="row">
+        <app-temperature [temperature]="patientDataService.temperature" [temperatureLabels]="patientDataService.temperatureLabels"></app-temperature>
+      </div>
+      <div class="row">
+
+        <app-heartbeat [heartbeat]="patientDataService.heartbeat" [heartbeatLabels]="patientDataService.heartbeat"></app-heartbeat>
+      </div>
+    </div>
+  </div>

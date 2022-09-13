@@ -1,0 +1,19 @@
+<div [@dialog]="visible" *ngIf="visible" class="dialog">
+
+    {{text}}
+    <button
+      (click)="Answer()"
+      aria-label="Answer"
+      class="answer-btn button"
+    >
+      Answer
+    </button>
+    <button
+      (click)="Decline()"
+      aria-label="Decline"
+      class="decline-btn button"
+    >
+      Deny
+    </button>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>

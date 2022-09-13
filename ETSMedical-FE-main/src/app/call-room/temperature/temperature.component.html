@@ -1,0 +1,10 @@
+<div style="display: block" *ngIf='temperature'>
+    <canvas baseChart
+            [datasets]="temperature"
+            [labels]="temperatureLabels"
+            [options]="chartOptions"
+            [legend]="chartLegend"
+            [chartType]="chartType"
+            [colors]="lineChartColors"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>

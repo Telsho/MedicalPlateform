@@ -1,0 +1,16 @@
+<ul class="list-group mt-4">
+  <li class="list-group-item" (click)="userClicked(user)" *ngFor="let user of users$ | async">
+    <div class="row">
+      <div class="col-5">
+        {{user.UserName}}
+      </div>
+      <div *ngIf="selectedUser == user"class="col-3">
+        <div class="snippet" data-title=".dot-carousel">
+          <div class="stage">
+            <div class="dot-carousel"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

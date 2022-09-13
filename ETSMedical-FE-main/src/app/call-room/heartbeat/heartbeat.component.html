@@ -1,0 +1,10 @@
+<div style="display: block" *ngIf='heartbeat'>
+    <canvas baseChart
+            [datasets]="heartbeat"
+            [labels]="heartbeatLabels"
+            [options]="chartOptions"
+            [legend]="chartLegend"
+            [chartType]="chartType"
+            [colors]="lineChartColors"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
